@@ -1,0 +1,72 @@
+* {
+  font-family: "Source Sans Pro", "TF-Regular", Arial, sans-serif;
+  font-kerning: normal;
+  -webkit-font-variant-ligatures: no-common-ligatures;
+  font-variant-ligatures: no-common-ligatures;
+  -webkit-font-feature-settings: "kern" 1, "liga" 0;
+  font-feature-settings: "kern" 1, "liga" 0;
+  text-rendering: optimizeLegibility;
+  -webkit-font-smoothing: antialiased;
+  -moz-osx-font-smoothing: grayscale;
+  line-height: 1.2;
+}
+
+
+input, textarea, select, button {
+  border: 0;
+  outline: 0;
+  background: none;
+  text-decoration: none;
+  box-shadow: none;
+  text-align: left;
+}
+
+a {
+  text-decoration: none;
+
+  &:focus-visible {
+    outline: 0;
+  }
+}
+
+
+
+h1 {
+  font-size: 2rem;
+  line-height: 1.2;
+}
+h2 {
+  font-size: 1.6rem;
+  font-weight: 600;
+}
+h3 {
+  font-size: 1.4rem;
+  font-weight: 600;
+  line-height: 1.2;
+}
+
+
+.container {
+  max-width: 80rem;
+  padding-left: 2rem;
+  padding-right: 2rem;
+  margin-left: auto;
+  margin-right: auto;
+  display: flex;
+}
+
+
+
+
+.bg-cloud {
+  background-color: rgba(140, 140, 140, 0.1);
+}
+
+
+.is-disabled {
+  cursor: not-allowed;
+  pointer-events: none;
+  box-shadow: none;
+  filter: grayscale(1) brightness(0.85);
+  opacity: 0.5;
+}

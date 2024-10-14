@@ -1,0 +1,38 @@
+.field {
+  display: flex;
+  flex-direction: column;
+  margin: .5rem;
+
+  label {
+    font-size: .9rem;
+    color: $color-label;
+    margin: 0 1rem .05rem;
+    border: .025rem solid transparent
+  }
+}
+
+
+input,
+textarea {
+  position: relative;
+  background-color: #FFF;
+  border-radius: .5rem;
+  padding: .5rem 1rem;
+  border: .025rem solid $color-border;
+  box-shadow: $component-shadow;
+  transition: border-color .15s ease-in-out, box-shadow .15s ease-in-out;
+
+  &:focus-visible {
+    border-color: $color-border-focus;
+    box-shadow: $component-shadow-focus;
+  }
+
+  &::placeholder {
+    color: $color-placeholder;
+  }
+}
+
+textarea {
+  resize: auto;
+
+}
