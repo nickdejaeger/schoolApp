@@ -10,6 +10,7 @@
     flex-direction: column;
     align-items: flex-start;
     width: 100%;
-    padding: 4rem 0;
+    padding-top: 4rem;
+    padding-bottom: 4rem;
   }
 </style>

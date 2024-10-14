@@ -46,63 +46,6 @@ const textareaContent2 = ref('')
     </ButtonGroup>
   </article>
 
-  <article v-if="component === 'collection'">
-    <Collection>
-      <CollectionItems>
-        <CollectionRow class="bg-cloud">
-          <CollectionCell>All</CollectionCell>
-        </CollectionRow>
-        <CollectionRow class="bg-cloud is-disabled">
-          <CollectionCell>Hybrid</CollectionCell>
-          <CollectionCell class="collection__cell--action"><i class="fa-solid fa-magnifying-glass"></i></CollectionCell>
-        </CollectionRow>
-        <CollectionRow class="bg-cloud">
-          <CollectionCell>On-site</CollectionCell>
-        </CollectionRow>
-        <CollectionRow class="bg-cloud">
-          <CollectionCell>Remote</CollectionCell>
-        </CollectionRow>
-      </CollectionItems>
-    </Collection>
-    <Collection class="bg-cloud">
-      <CollectionItems>
-        <CollectionRow>
-          <CollectionCell class="collection__cell--action"><i class="fa-solid fa-plus"></i></CollectionCell>
-          <CollectionCell>Create Smartlist</CollectionCell>
-        </CollectionRow>
-        <CollectionRow>
-          <CollectionCell class="collection__cell--action"><i class="fa-solid fa-plus"></i></CollectionCell>
-          <CollectionCell>Create as Smartlist</CollectionCell>
-        </CollectionRow>
-      </CollectionItems>
-    </Collection>
-    <Divider class="is-dotted is-dimmed" />
-    <Collection class="bg-cloud">
-      <CollectionItems>
-        <CollectionRow>
-          <CollectionCell class="collection__cell--action"><i class="fa-solid fa-check"></i></CollectionCell>
-          <CollectionCell>Save changes</CollectionCell>
-        </CollectionRow>
-      </CollectionItems>
-    </Collection>
-    <Divider class="is-dotted is-dimmed" />
-    <Collection class="bg-cloud">
-      <CollectionItems>
-        <CollectionRow>
-          <CollectionCell class="collection__cell--action"><i class="fa-solid fa-display"></i></CollectionCell>
-          <CollectionCell>Full screen</CollectionCell>
-        </CollectionRow>
-      </CollectionItems>
-    </Collection>
-  </article>
-
-  <article v-if="component === 'divider'" class="gap-6">
-    <Divider></Divider>
-    <Divider class="is-dimmed is-dashed"></Divider>
-    <Divider class="divider--center">Label</Divider>
-    <Divider></Divider>
-  </article>
-
   <article v-if="component === 'input'">
     <Input />
     <Input label="Enter your name" placeholder="Name" value="Nick" />
@@ -119,10 +62,6 @@ const textareaContent2 = ref('')
 
     <Textarea v-model="textareaContent2" />
   </article>
-
-  <article v-if="component === 'select'">
-    <Select></Select>
-  </article>  
 
 </template>
 

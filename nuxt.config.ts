@@ -46,7 +46,7 @@ export default defineNuxtConfig({
   },
   routeRules: {
     '/components': {
-      redirect: '/components/accordion'
+      redirect: '/components/Badge'
     }
   }
 })

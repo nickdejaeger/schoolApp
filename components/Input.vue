@@ -23,8 +23,6 @@ defineProps({
     default: 'text'
   }
 })
-
-
 </script>
 
 <template>

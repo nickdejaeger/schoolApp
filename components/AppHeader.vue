@@ -4,6 +4,7 @@
       <nav>
         <div><NuxtLink to="/" class="logo"><img src="/img/nuxt.png" alt="logo" />SchoolApp</NuxtLink></div>
         <aside>
+          <NuxtLink to="/lessen">Lessen</NuxtLink>
           <NuxtLink to="/components">Components</NuxtLink>
           <NuxtLink to="/store">Pinia Store</NuxtLink>
           <NuxtLink to="/404">404</NuxtLink>
