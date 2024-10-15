@@ -16,21 +16,23 @@ const lessen = ref([
 </script>
 
 <template>
-
   <PageContent>
     <PageHeader>Lessen</PageHeader>
-
-    <Les v-for="les in lessen"
-      :key="les.id"
-      :uid="les.id"
-      :title="les.name"
-      :vak="les.vak"
-      :leerplanddoelen="les.leerplanddoelen"
-      :klassen="les.klassen"
-      :leerjaren="les.leerjaren"
-      :voltooid="les.voltooid"
-    ></Les>
-
+    <section class="flex flex-col gap-4 w-full">
+      <Les v-for="les in lessen"
+        :key="les.id"
+        :uid="les.id"
+        :title="les.name"
+        :vak="les.vak"
+        :leerplanddoelen="les.leerplanddoelen"
+        :klassen="les.klassen"
+        :leerjaren="les.leerjaren"
+        :voltooid="les.voltooid"
+      ></Les>
+    </section>
   </PageContent>
-
 </template>
+
+<style scoped lang="scss">
+
+</style>

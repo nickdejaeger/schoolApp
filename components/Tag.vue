@@ -12,5 +12,7 @@ span {
   padding: .25rem .5rem;
 
   font-size: .75rem;
+  font-weight: 600;
+  text-transform: uppercase;
 }
 </style>
