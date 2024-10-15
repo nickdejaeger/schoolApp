@@ -9,6 +9,7 @@
           <NuxtLink to="/store">Pinia Store</NuxtLink>
           <NuxtLink to="/404">404</NuxtLink>
           <NuxtLink to="/posts/2?example=true">Post 2</NuxtLink>
+          <NuxtLink to="/database">Post 2</NuxtLink>
         </aside>
       </nav>
     </div>

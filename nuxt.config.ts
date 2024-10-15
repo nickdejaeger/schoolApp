@@ -71,5 +71,11 @@ export default defineNuxtConfig({
   routeRules: {
     // '/': { redirect: '/lessen' },
     '/components': { redirect: '/components/badge' }
-  }
+  },
+  runtimeConfig: {
+    public: {
+      supabaseUrl: process.env.SUPABASE_URL,
+      supabaseKey: process.env.SUPABASE_KEY,
+    }
+  },
 })
