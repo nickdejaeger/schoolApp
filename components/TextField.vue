@@ -2,7 +2,7 @@
 defineProps({
   id: {
     type: String,
-    default: () => `input-${Math.random().toString(36).substr(2, 9)}`
+    default: () => `input-` + useId()
   },
   label: {
     type: String,
@@ -26,13 +26,9 @@ defineProps({
 .field {
   display: flex;
   flex-direction: column;
+  gap: .25rem;
 
   label {
-    font-size: .75rem;
-    font-weight: 600;
-    text-transform: uppercase;
-    letter-spacing: .05rem;
-    color: rgba(0,0,0,.5);
     padding: 0 1.3rem;
   }
 
@@ -44,7 +40,7 @@ defineProps({
 
     &::placeholder {
       font-style: italic;
-      color: rgba(0,0,0,.5);
+      color: rgba(0,0,0,.35);
     }
 
     &:focus {

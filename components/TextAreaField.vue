@@ -18,7 +18,7 @@ defineProps({
 <template>
   <div class="field">
     <label v-if="label.length" :for="id">{{ label }}</label>
-    <div type="text" :placeholder="placeholder" :id="id" contenteditable="true"></div>
+    <textarea cols="10" rows="3" :id="id" :placeholder="placeholder"></textarea>
   </div>
 </template>
 
@@ -26,35 +26,22 @@ defineProps({
 .field {
   display: flex;
   flex-direction: column;
+  gap: .25rem;
 
   label {
-    font-size: .75rem;
-    font-weight: 600;
-    text-transform: uppercase;
-    letter-spacing: .05rem;
-    color: rgba(0,0,0,.5);
     padding: 0 1.3rem;
   }
 
-  div[contenteditable] {
+  textarea {
     background-color: rgba(0,0,0,.05);
     padding: .75rem 1.25rem;
     border-radius: .75rem;
     border: 1px solid rgba(0,0,0,.1);
-    
     min-width: 320px;
-    max-width: 750px;
-    width: 100%;
-    min-height: 100px;
-    resize: vertical;
 
-    resize: both;
-    overflow: scroll;
-
-    &[placeholder]:empty::before {
-      content: attr(placeholder);
+    &::placeholder {
       font-style: italic;
-      color: rgba(0,0,0,.5);
+      color: rgba(0,0,0,.35);
     }
 
     &:focus {

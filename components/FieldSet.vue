@@ -2,7 +2,7 @@
 defineProps({
   id: {
     type: String,
-    default: () => `input-${Math.random().toString(36).substr(2, 9)}`
+    default: () => `input-` + useId()
   },
   direction: {
     type: String,
