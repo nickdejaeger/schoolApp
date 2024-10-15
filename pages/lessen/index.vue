@@ -18,7 +18,7 @@ const lessen = ref([
 <template>
   <PageContent>
     <PageHeader>Lessen</PageHeader>
-    <section class="flex flex-col gap-4 w-full">
+    <section class="flex flex-col gap-4">
       <Les v-for="les in lessen"
         :key="les.id"
         :uid="les.id"
