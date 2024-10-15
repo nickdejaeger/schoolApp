@@ -1,8 +1,8 @@
 <script setup lang="ts">
 defineProps({
-  id: {
-    type: String,
-    default: () => `input-${Math.random().toString(36).substr(2, 9)}`
+  uid: {
+    type: Number,
+    default: ''
   },
   title: {
     type: String,
@@ -25,17 +25,19 @@ defineProps({
 
 <template>
 
-  <article :class="{ voltooid }">
-    <header>
-      <h2>{{ title }}</h2>
-      <div>
-        <span v-if="voltooid" class="flex items-center gap-1"><svg class="h-5 w-5" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2"  stroke-linecap="round"  stroke-linejoin="round"><polyline points="20 6 9 17 4 12" /></svg>Uitgevoerd</span>
-      </div>
-    </header>
-    
-    <div v-if="klassen.length" class="flex gap-2">Klassen: <Tag v-for="klas in klassen">{{ klas }}</Tag></div>
-    <div v-if="leerjaren.length" class="flex gap-2">Leerjaren: <Tag v-for="leerjaar in leerjaren">{{ leerjaar }}</Tag></div>
-  </article>
+  <NuxtLink :to="`/lessen/${uid}`">
+    <article :class="{ voltooid }">
+      <header>
+        <h2>{{ title }}</h2>
+        <div>
+          <span v-if="voltooid" class="flex items-center gap-1"><svg class="h-5 w-5" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2"  stroke-linecap="round"  stroke-linejoin="round"><polyline points="20 6 9 17 4 12" /></svg>Uitgevoerd</span>
+        </div>
+      </header>
+      
+      <div v-if="klassen.length" class="flex gap-2">Klassen: <Tag v-for="klas in klassen">{{ klas }}</Tag></div>
+      <div v-if="leerjaren.length" class="flex gap-2">Leerjaren: <Tag v-for="leerjaar in leerjaren">{{ leerjaar }}</Tag></div>
+    </article>
+  </NuxtLink>
 
 </template>
 
