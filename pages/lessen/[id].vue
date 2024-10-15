@@ -1,7 +1,6 @@
 <script setup lang="ts">
 const route = useRoute()
 const routeId = Number(route.params.id)
-
 const lessen = ref([
   { 
     id: 1,
@@ -15,8 +14,6 @@ const lessen = ref([
   { id: 2, name: 'Les B', vak: '', leerplanddoelen: '', klassen: ['2A', '2B'], leerjaren: ['2de', '3de'], voltooid: true },
   { id: 3, name: 'Les C', vak: '', leerplanddoelen: '', klassen: ['3A', '3B'], leerjaren: [], voltooid: false },
 ])
-
-
 </script>
 
 <template>

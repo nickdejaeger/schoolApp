@@ -1,9 +1,9 @@
 <script setup lang="ts">
 useSeoMeta({
-  title: 'SchoolApp title',
-  ogTitle: 'SchoolApp og title',
-  description: 'This is my amazing site, let me tell you all about it.',
-  ogDescription: 'This is my amazing site, let me tell you all about it.',
+  title: 'SchoolApp',
+  ogTitle: 'SchoolApp',
+  description: 'This is my amazing site',
+  ogDescription: 'This is my amazing site',
   ogImage: 'https://example.com/image.png',
   twitterCard: 'summary_large_image',
 })
