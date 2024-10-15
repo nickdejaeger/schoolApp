@@ -46,21 +46,20 @@ const textareaContent2 = ref('')
     </ButtonGroup>
   </article>
 
-  <article v-if="component === 'input'">
-    <Input />
-    <Input label="Enter your name" placeholder="Name" value="Nick" />
-    <Input type="email" label="Enter your email" placeholder="Email" />
-    <Input type="password" label="Enter your password" placeholder="Password" />
-    
-    <Textarea
-      v-model="textareaContent"
-      placeholder="Enter your text here"
-      :required="true"
+  <article v-if="component === 'field'">
 
-      label="Description"
-    />
+    <FieldSet>
+      <TextField label="Titel" placeholder="Titel van de les" />
+      <TextField label="Titel" placeholder="Titel van de les" />
+      <TextAreaField label="Beschrijving" placeholder="Beschrijving van de les" />
+    </FieldSet>
 
-    <Textarea v-model="textareaContent2" />
+    <FieldSet direction="horizontal">
+      <TextField label="Titel" placeholder="Titel van de les" />
+      <TextField label="Titel" placeholder="Titel van de les" />
+      <TextAreaField label="Beschrijving" placeholder="Beschrijving van de les" />
+    </FieldSet>
+
   </article>
 
 </template>
@@ -72,10 +71,6 @@ article {
   align-items: flex-start;
   width: 100%;
   position: relative;
-  background-color: rgba(0,0,0,.03);
-  border-radius: 1rem;
-  margin: 2rem 0;
-  padding: 1rem;
 
   header {
     margin: 0 0 1rem;

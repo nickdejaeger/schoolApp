@@ -45,8 +45,7 @@ export default defineNuxtConfig({
     }
   },
   routeRules: {
-    '/components': {
-      redirect: '/components/Badge'
-    }
+    // '/': { redirect: '/lessen' },
+    '/components': { redirect: '/components/badge' }
   }
 })
