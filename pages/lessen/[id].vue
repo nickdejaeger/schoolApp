@@ -1,6 +1,6 @@
 <script setup lang="ts">
 const route = useRoute()
-const routeId = route.params.id
+const routeId = Number(route.params.id)
 
 const lessen = ref([
   { 
