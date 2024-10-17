@@ -4,7 +4,6 @@
   <main class="container">
     <SideBar>
       <nav>
-        <NuxtLink :to="{ path: '/components/badge'}">Badge</NuxtLink>
         <NuxtLink :to="{ path: '/components/button'}">Button</NuxtLink>
         <NuxtLink :to="{ path: '/components/field'}">Field</NuxtLink>
         <NuxtLink :to="{ path: '/components/switch'}">Switch</NuxtLink>

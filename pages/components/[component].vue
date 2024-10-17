@@ -16,17 +16,41 @@ definePageMeta({
 
 const textareaContent = ref('')
 const textareaContent2 = ref('')
+
+const switchOptions = ref([
+  {
+    label: "Lorem",
+    value: "Lorem",
+    selected: true,
+  },
+  {
+    label: "Ipsum",
+    value: "Ipsum",
+    selected: false,
+  },
+])
+
+const switchOptions2 = ref([
+  {
+    label: "Red",
+    value: "Lorem",
+    selected: false,
+  },
+  {
+    label: "Blue",
+    value: "Ipsum",
+    selected: true,
+  },
+  {
+    label: "Green",
+    value: "Ipsum",
+    selected: false,
+  },
+])
 </script>
 
 <template>
   <PageHeader>{{ componentCap }}</PageHeader>
-
-  <article v-if="component === 'badge'">
-    <Badge>
-      <template #name>Jeff Bezos</template>
-      <template #job>CEO</template>
-    </Badge>
-  </article>
 
   <article v-if="component === 'button'">
     <ButtonGroup>
@@ -58,6 +82,14 @@ const textareaContent2 = ref('')
 
   </article>
 
+  <article v-if="component === 'switch'">
+
+    <FlexColGroup>
+      <Switch :options="switchOptions"></Switch>
+      <Switch :options="switchOptions2"></Switch>
+    </FlexColGroup>
+
+  </article>
 </template>
 
 <style scoped lang="scss">
