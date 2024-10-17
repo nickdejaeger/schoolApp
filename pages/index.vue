@@ -1,6 +1,12 @@
+<script setup>
+const { data } = await useFetch('/api/students')
+</script>
+
 <template>
   <SideBar></SideBar>
   <PageContent>
-    <Button>Hello index.vue</Button>
+    
+    {{ data }}
+
   </PageContent>
 </template>

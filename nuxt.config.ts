@@ -51,10 +51,22 @@ export default defineNuxtConfig({
   ],
 
   modules: [
+    //'@nuxtjs/supabase',
     '@pinia/nuxt',
     '@nuxtjs/tailwindcss'
   ],
-
+/*
+  supabase: {
+    redirect: false,
+    redirectOptions: {
+      login: '/login',
+      callback: '/confirm',
+      include: undefined,
+      exclude: [],
+      cookieRedirect: false,
+    },
+  },
+*/
   components: [
     { 
       path: '~/components',
@@ -72,10 +84,12 @@ export default defineNuxtConfig({
     // '/': { redirect: '/lessen' },
     '/components': { redirect: '/components/badge' }
   },
+
   runtimeConfig: {
     public: {
       supabaseUrl: process.env.SUPABASE_URL,
       supabaseKey: process.env.SUPABASE_KEY,
     }
   },
+
 })

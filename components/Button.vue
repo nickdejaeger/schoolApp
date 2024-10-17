@@ -1,59 +1,63 @@
+<script setup lang="ts">
+defineProps({
+  type: {
+    type: String,
+    default: ''
+  }
+})
+</script>
+
 <template>
-  <button type="button" class="button">
+  <button type="button" class="button" :class="type">
     <slot name="icon"></slot>
     <slot>Default Button Text</slot>
   </button>
 </template>
 
 <style scoped lang="scss">
-  .button {
+  button {
     position: relative;
+    top: 0;
+    left: 0;
     display: inline-flex;
     align-items: center;
     justify-content: flex-start;
-    gap: .5rem;
-
-    background-color: rgba(140, 140, 140, 0.15);
-    min-height: 2.5rem;
-    border: 1px solid transparent;
-    border-radius: 1.75rem;
+    gap: 0.5rem;
+    border: 1px solid #000000;
+    border-radius: .5rem;
     text-align: center;
     cursor: pointer;
-    transition: all 0.25s ease-in-out;
-
-    padding: 0.5rem 1.5rem;
+    padding: 0.5rem 1rem;
+    box-shadow: 1px 1px 0px #000, 2px 2px #000;
 
     &:hover {
-      background-color: rgba(140, 140, 140, 0.25);
+      top: 1px;
+      left: 1px;
+      box-shadow: 1px 1px #000;
     }
 
-    &--primary,
-    &--secondary {
+    &.primary,
+    &.secondary {
       color: #FFF;
     }
 
-    &--primary {
+    &.primary {
       background-color: #007efd;
+      border-color: #002040;
+      box-shadow: 1px 1px #002040, 2px 2px #002040;
 
       &:hover {
-        background-color: #0066ce;
+        box-shadow: 1px 1px #002040;
       }
     }
 
-    &--secondary {
+    &.secondary {
       background-color: #de0000;
+      border-color: #680000;
+      box-shadow: 1px 1px #680000, 2px 2px #680000;
 
       &:hover {
-        background-color: #ca1212;
-      }
-    }
-
-    &--transparent {
-      background-color: transparent;
-      border: 1px solid $color-border;
-
-      &:hover {
-        background-color: rgba(0,0,0,.02)
+        box-shadow: 1px 1px #680000;
       }
     }
   }

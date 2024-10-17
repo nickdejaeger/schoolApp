@@ -18,7 +18,11 @@
   async function submitStudent() {
     const { data } = await $supabase.from('students')
     .insert([
-      { name: studentName.value, age: studentAge.value, grade: studentGrade.value }
+      { 
+        name: studentName.value,
+        age: studentAge.value,
+        grade: studentGrade.value
+      }
     ])
     .select()
 
