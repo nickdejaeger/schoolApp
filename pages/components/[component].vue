@@ -53,7 +53,7 @@ const switchOptions2 = ref([
   <PageHeader>{{ componentCap }}</PageHeader>
 
   <article v-if="component === 'button'">
-    <ButtonGroup>
+    <FlexRowGroup>
       <Button>Default</Button>
       <Button type="primary">Lorem ipsum</Button>
       <Button>
@@ -63,22 +63,24 @@ const switchOptions2 = ref([
         Search
       </Button>
       <Button type="secondary">Secondary</Button>
-    </ButtonGroup>
+    </FlexRowGroup>
   </article>
 
   <article v-if="component === 'field'">
 
-    <FieldSet>
-      <TextField label="Titel" placeholder="Titel van de les" />
-      <TextField label="Titel" placeholder="Titel van de les" />
-      <TextAreaField label="Beschrijving" placeholder="Beschrijving van de les" />
-    </FieldSet>
+    <FlexColGroup>
+      <Input :modelValue="'with pre value'" />
+      <Input placeholder="with placeholder" />
+      <Input type="password" :modelValue="'password'" />
+      <Input type="textarea" :modelValue="'textarea'" />
+      <Input type="textarea" placeholder="placeholder textarea" />
+      <Input type="checkbox" :modelValue="'this is a checkbox'" />
 
-    <FieldSet direction="horizontal">
-      <TextField label="Titel" placeholder="Titel van de les" />
-      <TextField label="Titel" placeholder="Titel van de les" />
-      <TextAreaField label="Beschrijving" placeholder="Beschrijving van de les" />
-    </FieldSet>
+      <Field label="this is a label">
+        <Input :modelValue="'combo field + input'" />
+      </Field>
+
+    </FlexColGroup>
 
   </article>
 

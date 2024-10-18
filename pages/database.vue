@@ -25,7 +25,17 @@
       }
     ])
     .select()
+    getStudents()
 
+    studentName = ref('')
+    studentAge = ref(0)
+    studentGrade = ref('')
+  }
+
+  async function deleteStudent(id) {
+    const { data } = await $supabase.from('students')
+    .delete()
+    .eq('id', id)
     getStudents()
   }
 </script>
@@ -34,10 +44,24 @@
   <PageContent>
     <PageHeader>Studenten</PageHeader>
     <div class="flex flex-row">
-      <input v-model="studentName" type="text" placeholder="name">
-      <input v-model="studentAge" type="number" value="0">
-      <input v-model="studentGrade" type="text" placeholder="grade">
-      <Button class="button--primary" @click="submitStudent()">Add new student</Button>
+      <FlexRowGroup>
+        <Input 
+          :modelValue="studentName"
+          placeholder="name"
+          @update:modelValue="(value) => studentName = value"
+        />
+        <Input 
+          type="number"
+          :modelValue="studentAge"
+          @update:modelValue="(value) => studentAge = value"
+        />
+        <Input 
+          :modelValue="studentGrade"
+          placeholder="grade"
+          @update:modelValue="(value) => studentGrade = value"
+        />
+        <Button @click="submitStudent()">Add new student</Button>
+      </FlexRowGroup>
     </div>
     <table>
       <thead>
@@ -52,6 +76,7 @@
           <td>{{ student.name }}</td>
           <td>{{ student.age }}</td>
           <td>{{ student.grade }}</td>
+          <td><Button @click="deleteStudent(student.id)" class="secondary">delete</Button></td>
         </tr>
       </tbody>  
     </table>
@@ -63,13 +88,20 @@ table {
   background-color: rgba(0,0,0,.05);
   tr {
     td {
-      padding: .25rem;
+      padding: .5rem .5rem;
     }
   }
   thead {
     tr {
       td {
         font-weight: 600;
+      }
+    }
+  }
+  tbody {
+    tr:nth-of-type(odd) {
+      td {
+        background-color: #DDD;
       }
     }
   }
