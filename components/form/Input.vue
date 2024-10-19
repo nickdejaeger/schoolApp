@@ -8,10 +8,6 @@ defineProps({
     type: String,
     default: 'text'
   },
-  value: {
-    type: String,
-    default: ''
-  },
   modelValue: {
     type: String,
     default: ''
@@ -43,9 +39,7 @@ defineProps({
     :placeholder="placeholder"
     class="input"
 
-    @input="
-      $emit('update:modelValue', ($event.target as HTMLInputElement).value)
-    "
+    @input="$emit('update:modelValue', ($event.target as HTMLInputElement).value)"
   >
 
 </template>

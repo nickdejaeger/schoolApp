@@ -4,7 +4,7 @@ export default defineNuxtConfig({
   compatibilityDate: '2024-04-03',
 
   devtools: { 
-    enabled: false
+    enabled: true
   },
 
   app: {
@@ -29,6 +29,12 @@ export default defineNuxtConfig({
       title: 'App local'
     },
     //pageTransition: { name: 'page', mode: 'out-in' }
+  },
+
+  nitro: {
+    imports: {
+      dirs: ['./server/utils']
+    }
   },
 
   ssr: false,
